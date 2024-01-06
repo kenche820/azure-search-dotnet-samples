@@ -26,6 +26,7 @@ export default function Facets(props) {
         props.setFilters(newFilters);
     }
 
+    /*
     var facets;
     try{
         facets = Object.keys(props.facets).map(key => {
@@ -53,14 +54,14 @@ export default function Facets(props) {
               />
             </li>);
           });
-
+*/
 
     return (
         <div id="facetPanel" className="box">
             <div className="facetbox">
                 <div id="clearFilters">
                 <ul className="filterlist">
-                    {filters}
+               
                 </ul>
                 </div>
                 <FacetList component="nav" className="listitem" >
