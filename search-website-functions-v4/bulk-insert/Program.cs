@@ -7,8 +7,8 @@ using AzureSearch.BulkInsert;
 using ServiceStack;
 
 const string BOOKS_URL = "https://raw.githubusercontent.com/Azure-Samples/azure-search-sample-data/main/good-books/books.csv";
-const string SEARCH_ENDPOINT = "https://YOUR-SEARCH-RESOURCE-NAME.search.windows.net";
-const string SEARCH_KEY = "YOUR-SEARCH-ADMIN-KEY";
+const string SEARCH_ENDPOINT = "https://ken-cog-search-svc.search.windows.net";
+const string SEARCH_KEY = "y4IvahCJXDTC3hvDjjlrZZjWsmwmiXrW2iJqv5MgKHAzSeBvYjbF";
 const string SEARCH_INDEX_NAME = "good-books";
 
 Uri searchEndpointUri = new(SEARCH_ENDPOINT);
