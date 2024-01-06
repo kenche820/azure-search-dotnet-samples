@@ -51,7 +51,7 @@ export default function SearchBar(props) {
             } else {
                 axios.post( '/api/suggest', body)
                 .then(response => {
-                    console.log(JSON.stringify(response.data))
+//                    console.log(JSON.stringify(response.data))
                     setSuggestions(response.data.suggestions);
                 } )
                 .catch(error => {
