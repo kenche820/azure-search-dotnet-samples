@@ -1,11 +1,12 @@
 import React from 'react';
-import { List, Chip } from '@mui/material';
-import CheckboxFacet from './CheckboxFacet/CheckboxFacet';
+//import { List, Chip } from '@mui/material';
+//import CheckboxFacet from './CheckboxFacet/CheckboxFacet';
 import styled from 'styled-components';
 import "./Facets.css";
 
 export default function Facets(props) {
 
+  /*
     function mapFacetName(facetName) {
         const capitalizeFirstLetter = (string) =>
             string[0] ? `${string[0].toUpperCase()}${string.substring(1)}` : '';
@@ -26,7 +27,6 @@ export default function Facets(props) {
         props.setFilters(newFilters);
     }
 
-    /*
     var facets;
     try{
         facets = Object.keys(props.facets).map(key => {
