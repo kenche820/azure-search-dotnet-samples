@@ -17,7 +17,7 @@ namespace WebSearch.Function
     {
         private static string searchApiKey = Environment.GetEnvironmentVariable("SearchApiKey", EnvironmentVariableTarget.Process);
         private static string searchServiceName = Environment.GetEnvironmentVariable("SearchServiceName", EnvironmentVariableTarget.Process);
-        private static string searchIndexName = Environment.GetEnvironmentVariable("SearchIndexName", EnvironmentVariableTarget.Process) ?? "good-books";
+        private static string searchIndexName = Environment.GetEnvironmentVariable("SearchIndexName", EnvironmentVariableTarget.Process) ?? "sharepoint-index";
 
         private readonly ILogger<Lookup> _logger;
 
@@ -49,13 +49,13 @@ namespace WebSearch.Function
                 Size = data.Size,
                 Skip = data.Skip,
                 IncludeTotalCount = true,
-                Filter = CreateFilterExpression(data.Filters)
+//                Filter = CreateFilterExpression(data.Filters)
             };
-            options.Facets.Add("authors");
-            options.Facets.Add("language_code");
+//            options.Facets.Add("authors");
+//            options.Facets.Add("language_code");
 
             SearchResults<SearchDocument> searchResults = searchClient.Search<SearchDocument>(data.SearchText, options);
-
+/*
             var facetOutput = new Dictionary<string, IList<FacetValue>>();
             foreach (var facetResult in searchResults.Facets)
             {
@@ -64,7 +64,7 @@ namespace WebSearch.Function
 
                            .ToList();
             }
-
+*/
             // Data to return 
             var output = new SearchOutput
             {
@@ -91,7 +91,7 @@ namespace WebSearch.Function
             }
 
             List<string> filterExpressions = new();
-
+/*
 
             List<SearchFilter> authorFilters = filters.Where(f => f.field == "authors").ToList();
             List<SearchFilter> languageFilters = filters.Where(f => f.field == "language_code").ToList();
@@ -109,7 +109,7 @@ namespace WebSearch.Function
             {
                 filterExpressions.Add($"language_code eq '{value}'");
             }
-
+*/
             return string.Join(" and ", filterExpressions);
         }
     }
