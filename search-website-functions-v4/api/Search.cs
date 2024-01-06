@@ -70,7 +70,7 @@ namespace WebSearch.Function
             {
                 Count = searchResults.TotalCount,
                 Results = searchResults.GetResults().ToList(),
-                Facets = facetOutput
+//                Facets = facetOutput
             };
             
             var response = req.CreateResponse(HttpStatusCode.Found);
