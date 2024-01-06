@@ -15,6 +15,9 @@ export default function Results(props) {
   let beginDocNumber = Math.min(props.skip + 1, props.count);
   let endDocNumber = Math.min(props.skip + props.top, props.count);
 
+  console.log("Kenneth checks props")
+  console.log(`result prop = ${JSON.stringify(props)}`)
+
   return (
     <div>
       <p className="results-info">Showing {beginDocNumber}-{endDocNumber} of {props.count.toLocaleString()} results</p>

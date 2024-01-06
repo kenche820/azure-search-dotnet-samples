@@ -3,9 +3,6 @@ import React from 'react';
 import './Result.css';
 
 export default function Result(props) {
-
-    console.log("Kenneth checks props")
-    console.log(`result prop = ${JSON.stringify(props)}`)
     
     return(
     <div className="card result">
