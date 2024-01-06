@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react';
-import axios from 'axios';
+//import axios from 'axios';
 import Suggestions from './Suggestions/Suggestions';
 
 import "./SearchBar.css";
@@ -7,7 +7,7 @@ import "./SearchBar.css";
 export default function SearchBar(props) {
 
     let [q, setQ] = useState("");
-    let [suggestions, setSuggestions] = useState([]);
+  //  let [suggestions, setSuggestions] = useState([]);
     let [showSuggestions, setShowSuggestions] = useState(false);
 
     const onSearchHandler = () => {
@@ -38,15 +38,16 @@ export default function SearchBar(props) {
         }
     }
 
+/*
     useEffect(_ =>{
-        const timer = setTimeout(() => {
+        const timer = setTimeout(() => {            
             const body = {
                 q: q,
                 top: 5,
                 suggester: 'sg'
             };
 
-/*
+
             if (q === '') {
                 setSuggestions([]);
             } else {
