@@ -1,7 +1,7 @@
 import React from 'react';
 //import { List, Chip } from '@mui/material';
 //import CheckboxFacet from './CheckboxFacet/CheckboxFacet';
-import styled from 'styled-components';
+//import styled from 'styled-components';
 import "./Facets.css";
 
 export default function Facets(props) {
