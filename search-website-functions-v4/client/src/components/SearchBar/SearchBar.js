@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import React, {useEffect} from 'react';
+import {useEffect} from 'react';
 import axios from 'axios';
 import Suggestions from './Suggestions/Suggestions';
 
