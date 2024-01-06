@@ -49,10 +49,12 @@ export default function SearchBar(props) {
             if (q === '') {
                 setSuggestions([]);
             } else {
+/*                
                 axios.post( '/api/suggest', body)
                 .then(response => {
 //                    console.log(JSON.stringify(response.data))
                     setSuggestions(response.data.suggestions);
+*/                    
                 } )
                 .catch(error => {
                     console.log(error);
