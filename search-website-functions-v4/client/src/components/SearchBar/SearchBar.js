@@ -46,21 +46,22 @@ export default function SearchBar(props) {
                 suggester: 'sg'
             };
 
+/*
             if (q === '') {
                 setSuggestions([]);
             } else {
-/*                
+                
                 axios.post( '/api/suggest', body)
                 .then(response => {
 //                    console.log(JSON.stringify(response.data))
-                    setSuggestions(response.data.suggestions);
-*/                    
+                    setSuggestions(response.data.suggestions);                    
                 } )
                 .catch(error => {
                     console.log(error);
                     setSuggestions([]);
                 });
             }
+*/            
         }, 300);
         return () => clearTimeout(timer);
     }, [q, props]);
