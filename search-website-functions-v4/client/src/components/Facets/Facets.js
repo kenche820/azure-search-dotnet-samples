@@ -64,9 +64,7 @@ export default function Facets(props) {
                
                 </ul>
                 </div>
-                <FacetList component="nav" className="listitem" >
-        
-                </FacetList>    
+  
             </div>
         </div>
     );
