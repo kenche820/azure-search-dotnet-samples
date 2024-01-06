@@ -61,12 +61,11 @@ export default function SearchBar(props) {
                     console.log(error);
                     setSuggestions([]);
                 });
-            }
-*/            
-        }, 300);
+            }            
+        }, 300);        
         return () => clearTimeout(timer);
     }, [q, props]);
-
+*/
     var suggestionDiv;
     if (showSuggestions) {
         suggestionDiv = (<Suggestions suggestions={suggestions} suggestionClickHandler={(s) => suggestionClickHandler(s)}></Suggestions>);
