@@ -9,12 +9,13 @@ export default function SearchBar(props) {
     let [q, setQ] = useState("");
     let [suggestions, setSuggestions] = useState([]);
     let [showSuggestions, setShowSuggestions] = useState(false);
+*/    
 
     const onSearchHandler = () => {
         props.postSearchHandler(q);
-        setShowSuggestions(false);
+//        setShowSuggestions(false);
     }
-
+/*
     const suggestionClickHandler = (s) => {
         document.getElementById("search-box").value = s;
         setShowSuggestions(false);
@@ -74,8 +75,8 @@ export default function SearchBar(props) {
 */
     return (
         <div >
-            <div className="input-group" onKeyDown={e => onEnterButton(e)}>
-                <div className="suggestions" >
+            <div className="input-group">
+
                     <input 
                         autoComplete="off" // setting for browsers; not the app
                         type="text" 
@@ -84,7 +85,7 @@ export default function SearchBar(props) {
                         placeholder="What are you looking for?"                          
                         defaultValue={props.q}>
                     </input>                    
-                </div>
+                
                 <div className="input-group-btn">
                     <button className="btn btn-primary rounded-0" type="submit" onClick={onSearchHandler}>
                         Search
