@@ -33,9 +33,9 @@ export default function SearchBar(props) {
         setQ(searchTerm);
 
         // use this prop if you want to make the search more reactive
-        if (props.searchChangeHandler) {
-            props.searchChangeHandler(searchTerm);
-        }
+  //      if (props.searchChangeHandler) {
+  //          props.searchChangeHandler(searchTerm);
+  //      }
     }
 
     useEffect(_ =>{
