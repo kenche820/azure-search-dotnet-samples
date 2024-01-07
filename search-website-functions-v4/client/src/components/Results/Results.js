@@ -12,6 +12,9 @@ export default function Results(props) {
       />;
   });
 
+  console.log("Kenneth checks props")
+  console.log(JSON.stringify(props))
+  
   let beginDocNumber = Math.min(props.skip + 1, props.count);
   let endDocNumber = Math.min(props.skip + props.top, props.count);
 
